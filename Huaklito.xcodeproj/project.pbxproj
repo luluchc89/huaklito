@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A33A28C093D53BD75D5E021 /* Pods_HuaklitoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFA564724CEA90683671D1C /* Pods_HuaklitoTests.framework */; };
+		65530411B834C3EE47B7A284 /* Pods_Huaklito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC234799C14564C27EB7E42 /* Pods_Huaklito.framework */; };
+		980AC01A23F72BD4004C135E /* BuyProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC01923F72BD4004C135E /* BuyProductsViewController.swift */; };
+		980AC01C23F735EE004C135E /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC01B23F735EE004C135E /* ProductCollectionViewCell.swift */; };
+		98AF7C4B23F36BF300209400 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF7C4A23F36BF300209400 /* AppDelegate.swift */; };
+		98AF7C4D23F36BF300209400 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF7C4C23F36BF300209400 /* SceneDelegate.swift */; };
+		98AF7C4F23F36BF300209400 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF7C4E23F36BF300209400 /* ViewController.swift */; };
+		98AF7C5223F36BF300209400 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98AF7C5023F36BF300209400 /* Main.storyboard */; };
+		98AF7C5423F36BF500209400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98AF7C5323F36BF500209400 /* Assets.xcassets */; };
+		98AF7C5723F36BF500209400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98AF7C5523F36BF500209400 /* LaunchScreen.storyboard */; };
+		98AF7C6223F36BF500209400 /* HuaklitoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF7C6123F36BF500209400 /* HuaklitoTests.swift */; };
+		98AF7C6E23F36DF800209400 /* BuyProducts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98AF7C6D23F36DF800209400 /* BuyProducts.storyboard */; };
+		98AF7C7223F36F4E00209400 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98AF7C7123F36F4E00209400 /* Statistics.storyboard */; };
+		98AF7C7523F373F500209400 /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98AF7C7423F373F500209400 /* Orders.storyboard */; };
+		98AF7C7923F638D200209400 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF7C7823F638D200209400 /* Product.swift */; };
+		98AF7C7B23F63A8D00209400 /* ProductCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF7C7A23F63A8D00209400 /* ProductCategory.swift */; };
+		98AF7C7F23F646F300209400 /* GetProductsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF7C7E23F646F300209400 /* GetProductsService.swift */; };
+		98AF7C8223F6538400209400 /* GetProductsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF7C8123F6538400209400 /* GetProductsServiceTests.swift */; };
+		98AF7C8423F6582900209400 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98AF7C8323F6582900209400 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		98AF7C5E23F36BF500209400 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98AF7C3F23F36BF300209400 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98AF7C4623F36BF300209400;
+			remoteInfo = Huaklito;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4A1B7B135376883EC98A4FD7 /* Pods-Huaklito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huaklito.debug.xcconfig"; path = "Target Support Files/Pods-Huaklito/Pods-Huaklito.debug.xcconfig"; sourceTree = "<group>"; };
+		573A204244FC76EB11D07EC1 /* Pods-Huaklito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huaklito.release.xcconfig"; path = "Target Support Files/Pods-Huaklito/Pods-Huaklito.release.xcconfig"; sourceTree = "<group>"; };
+		7C0B8B8FF44B2C1EA6B464C2 /* Pods-HuaklitoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuaklitoTests.debug.xcconfig"; path = "Target Support Files/Pods-HuaklitoTests/Pods-HuaklitoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		980AC01923F72BD4004C135E /* BuyProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyProductsViewController.swift; sourceTree = "<group>"; };
+		980AC01B23F735EE004C135E /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		98AF7C4723F36BF300209400 /* Huaklito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huaklito.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		98AF7C4A23F36BF300209400 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		98AF7C4C23F36BF300209400 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		98AF7C4E23F36BF300209400 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		98AF7C5123F36BF300209400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		98AF7C5323F36BF500209400 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		98AF7C5623F36BF500209400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		98AF7C5823F36BF500209400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98AF7C5D23F36BF500209400 /* HuaklitoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HuaklitoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		98AF7C6123F36BF500209400 /* HuaklitoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuaklitoTests.swift; sourceTree = "<group>"; };
+		98AF7C6323F36BF500209400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98AF7C6D23F36DF800209400 /* BuyProducts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BuyProducts.storyboard; sourceTree = "<group>"; };
+		98AF7C7123F36F4E00209400 /* Statistics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
+		98AF7C7423F373F500209400 /* Orders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Orders.storyboard; sourceTree = "<group>"; };
+		98AF7C7823F638D200209400 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		98AF7C7A23F63A8D00209400 /* ProductCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategory.swift; sourceTree = "<group>"; };
+		98AF7C7E23F646F300209400 /* GetProductsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductsService.swift; sourceTree = "<group>"; };
+		98AF7C8123F6538400209400 /* GetProductsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductsServiceTests.swift; sourceTree = "<group>"; };
+		98AF7C8323F6582900209400 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BEFA564724CEA90683671D1C /* Pods_HuaklitoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HuaklitoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFC234799C14564C27EB7E42 /* Pods_Huaklito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Huaklito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D2ACE0B3E572156A9ECFEF /* Pods-HuaklitoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuaklitoTests.release.xcconfig"; path = "Target Support Files/Pods-HuaklitoTests/Pods-HuaklitoTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		98AF7C4423F36BF300209400 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65530411B834C3EE47B7A284 /* Pods_Huaklito.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98AF7C5A23F36BF500209400 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A33A28C093D53BD75D5E021 /* Pods_HuaklitoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15094CF814D86C1E040AA272 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B7B135376883EC98A4FD7 /* Pods-Huaklito.debug.xcconfig */,
+				573A204244FC76EB11D07EC1 /* Pods-Huaklito.release.xcconfig */,
+				7C0B8B8FF44B2C1EA6B464C2 /* Pods-HuaklitoTests.debug.xcconfig */,
+				E1D2ACE0B3E572156A9ECFEF /* Pods-HuaklitoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		98AF7C3E23F36BF300209400 = {
+			isa = PBXGroup;
+			children = (
+				98AF7C4923F36BF300209400 /* Huaklito */,
+				98AF7C6023F36BF500209400 /* HuaklitoTests */,
+				98AF7C4823F36BF300209400 /* Products */,
+				15094CF814D86C1E040AA272 /* Pods */,
+				DAC51615D2D181F67C4C3A36 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		98AF7C4823F36BF300209400 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98AF7C4723F36BF300209400 /* Huaklito.app */,
+				98AF7C5D23F36BF500209400 /* HuaklitoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		98AF7C4923F36BF300209400 /* Huaklito */ = {
+			isa = PBXGroup;
+			children = (
+				98AF7C8323F6582900209400 /* GoogleService-Info.plist */,
+				98AF7C7723F638BE00209400 /* Model */,
+				98AF7C7623F3769E00209400 /* DataSource */,
+				98AF7C7323F370A300209400 /* View-Controllers */,
+				98AF7C6C23F36DAD00209400 /* Storyboards */,
+				98AF7C4A23F36BF300209400 /* AppDelegate.swift */,
+				98AF7C4C23F36BF300209400 /* SceneDelegate.swift */,
+				98AF7C4E23F36BF300209400 /* ViewController.swift */,
+				98AF7C5323F36BF500209400 /* Assets.xcassets */,
+				98AF7C5523F36BF500209400 /* LaunchScreen.storyboard */,
+				98AF7C5823F36BF500209400 /* Info.plist */,
+			);
+			path = Huaklito;
+			sourceTree = "<group>";
+		};
+		98AF7C6023F36BF500209400 /* HuaklitoTests */ = {
+			isa = PBXGroup;
+			children = (
+				98AF7C8023F6528100209400 /* Datasource */,
+				98AF7C6123F36BF500209400 /* HuaklitoTests.swift */,
+				98AF7C6323F36BF500209400 /* Info.plist */,
+			);
+			path = HuaklitoTests;
+			sourceTree = "<group>";
+		};
+		98AF7C6C23F36DAD00209400 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				98AF7C5023F36BF300209400 /* Main.storyboard */,
+				98AF7C6D23F36DF800209400 /* BuyProducts.storyboard */,
+				98AF7C7123F36F4E00209400 /* Statistics.storyboard */,
+				98AF7C7423F373F500209400 /* Orders.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		98AF7C7323F370A300209400 /* View-Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				980AC01923F72BD4004C135E /* BuyProductsViewController.swift */,
+				980AC01B23F735EE004C135E /* ProductCollectionViewCell.swift */,
+			);
+			path = "View-Controllers";
+			sourceTree = "<group>";
+		};
+		98AF7C7623F3769E00209400 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				98AF7C7E23F646F300209400 /* GetProductsService.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		98AF7C7723F638BE00209400 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				98AF7C7823F638D200209400 /* Product.swift */,
+				98AF7C7A23F63A8D00209400 /* ProductCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		98AF7C8023F6528100209400 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				98AF7C8123F6538400209400 /* GetProductsServiceTests.swift */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		DAC51615D2D181F67C4C3A36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFC234799C14564C27EB7E42 /* Pods_Huaklito.framework */,
+				BEFA564724CEA90683671D1C /* Pods_HuaklitoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		98AF7C4623F36BF300209400 /* Huaklito */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98AF7C6623F36BF500209400 /* Build configuration list for PBXNativeTarget "Huaklito" */;
+			buildPhases = (
+				094335A96DAC69C8B82B2CCF /* [CP] Check Pods Manifest.lock */,
+				98AF7C4323F36BF300209400 /* Sources */,
+				98AF7C4423F36BF300209400 /* Frameworks */,
+				98AF7C4523F36BF300209400 /* Resources */,
+				FE385766D003E3DFEAA7764C /* [CP] Embed Pods Frameworks */,
+				0115EBD71CEAD80978258E7F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Huaklito;
+			productName = Huaklito;
+			productReference = 98AF7C4723F36BF300209400 /* Huaklito.app */;
+			productType = "com.apple.product-type.application";
+		};
+		98AF7C5C23F36BF500209400 /* HuaklitoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98AF7C6923F36BF500209400 /* Build configuration list for PBXNativeTarget "HuaklitoTests" */;
+			buildPhases = (
+				36B7FEE6D524B942BEF608B3 /* [CP] Check Pods Manifest.lock */,
+				98AF7C5923F36BF500209400 /* Sources */,
+				98AF7C5A23F36BF500209400 /* Frameworks */,
+				98AF7C5B23F36BF500209400 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				98AF7C5F23F36BF500209400 /* PBXTargetDependency */,
+			);
+			name = HuaklitoTests;
+			productName = HuaklitoTests;
+			productReference = 98AF7C5D23F36BF500209400 /* HuaklitoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		98AF7C3F23F36BF300209400 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = sgh;
+				TargetAttributes = {
+					98AF7C4623F36BF300209400 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					98AF7C5C23F36BF500209400 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 98AF7C4623F36BF300209400;
+					};
+				};
+			};
+			buildConfigurationList = 98AF7C4223F36BF300209400 /* Build configuration list for PBXProject "Huaklito" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 98AF7C3E23F36BF300209400;
+			productRefGroup = 98AF7C4823F36BF300209400 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				98AF7C4623F36BF300209400 /* Huaklito */,
+				98AF7C5C23F36BF500209400 /* HuaklitoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		98AF7C4523F36BF300209400 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98AF7C5723F36BF500209400 /* LaunchScreen.storyboard in Resources */,
+				98AF7C7523F373F500209400 /* Orders.storyboard in Resources */,
+				98AF7C6E23F36DF800209400 /* BuyProducts.storyboard in Resources */,
+				98AF7C7223F36F4E00209400 /* Statistics.storyboard in Resources */,
+				98AF7C5423F36BF500209400 /* Assets.xcassets in Resources */,
+				98AF7C5223F36BF300209400 /* Main.storyboard in Resources */,
+				98AF7C8423F6582900209400 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98AF7C5B23F36BF500209400 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0115EBD71CEAD80978258E7F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Huaklito/Pods-Huaklito-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Huaklito/Pods-Huaklito-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Huaklito/Pods-Huaklito-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		094335A96DAC69C8B82B2CCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Huaklito-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36B7FEE6D524B942BEF608B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HuaklitoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE385766D003E3DFEAA7764C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Huaklito/Pods-Huaklito-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Huaklito/Pods-Huaklito-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Huaklito/Pods-Huaklito-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		98AF7C4323F36BF300209400 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98AF7C7B23F63A8D00209400 /* ProductCategory.swift in Sources */,
+				98AF7C4F23F36BF300209400 /* ViewController.swift in Sources */,
+				980AC01C23F735EE004C135E /* ProductCollectionViewCell.swift in Sources */,
+				98AF7C7F23F646F300209400 /* GetProductsService.swift in Sources */,
+				980AC01A23F72BD4004C135E /* BuyProductsViewController.swift in Sources */,
+				98AF7C7923F638D200209400 /* Product.swift in Sources */,
+				98AF7C4B23F36BF300209400 /* AppDelegate.swift in Sources */,
+				98AF7C4D23F36BF300209400 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98AF7C5923F36BF500209400 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98AF7C8223F6538400209400 /* GetProductsServiceTests.swift in Sources */,
+				98AF7C6223F36BF500209400 /* HuaklitoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		98AF7C5F23F36BF500209400 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 98AF7C4623F36BF300209400 /* Huaklito */;
+			targetProxy = 98AF7C5E23F36BF500209400 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		98AF7C5023F36BF300209400 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				98AF7C5123F36BF300209400 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		98AF7C5523F36BF500209400 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				98AF7C5623F36BF500209400 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		98AF7C6423F36BF500209400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		98AF7C6523F36BF500209400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		98AF7C6723F36BF500209400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A1B7B135376883EC98A4FD7 /* Pods-Huaklito.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Huaklito/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgh.Huaklito;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		98AF7C6823F36BF500209400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 573A204244FC76EB11D07EC1 /* Pods-Huaklito.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Huaklito/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgh.Huaklito;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		98AF7C6A23F36BF500209400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C0B8B8FF44B2C1EA6B464C2 /* Pods-HuaklitoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HuaklitoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgh.HuaklitoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Huaklito.app/Huaklito";
+			};
+			name = Debug;
+		};
+		98AF7C6B23F36BF500209400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1D2ACE0B3E572156A9ECFEF /* Pods-HuaklitoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HuaklitoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgh.HuaklitoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Huaklito.app/Huaklito";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		98AF7C4223F36BF300209400 /* Build configuration list for PBXProject "Huaklito" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98AF7C6423F36BF500209400 /* Debug */,
+				98AF7C6523F36BF500209400 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98AF7C6623F36BF500209400 /* Build configuration list for PBXNativeTarget "Huaklito" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98AF7C6723F36BF500209400 /* Debug */,
+				98AF7C6823F36BF500209400 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98AF7C6923F36BF500209400 /* Build configuration list for PBXNativeTarget "HuaklitoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98AF7C6A23F36BF500209400 /* Debug */,
+				98AF7C6B23F36BF500209400 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 98AF7C3F23F36BF300209400 /* Project object */;
+}

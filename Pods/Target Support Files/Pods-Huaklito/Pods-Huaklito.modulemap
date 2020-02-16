@@ -1,0 +1,6 @@
+framework module Pods_Huaklito {
+  umbrella header "Pods-Huaklito-umbrella.h"
+
+  export *
+  module * { export * }
+}
