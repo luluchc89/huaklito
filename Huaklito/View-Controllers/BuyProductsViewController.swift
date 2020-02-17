@@ -16,7 +16,7 @@ class BuyProductsViewController: UIViewController {
     private let reuseIdentifier = "productCell"
     private let productsService = GetProductsService()
     
-    var fruits: [Product]? = [] {
+    var products: [[Product]]? = [] {
         didSet {
             self.productsCollection.reloadData()
         }
@@ -31,8 +31,8 @@ class BuyProductsViewController: UIViewController {
         productsCollection.dataSource = self
         productsCollection.delegate = self
         
-        productsService.getFruits { data in
-            self.fruits = data
+        productsService.getProducts { data in
+            self.products = data
         }
         
     }
@@ -55,15 +55,15 @@ class BuyProductsViewController: UIViewController {
 extension BuyProductsViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return fruits!.count
-        //return 10
+        //return products![0].count ?? 0
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ProductCollectionViewCell
         cell.productImage.image = UIImage(named: "holder")
-        cell.productName.text = fruits![indexPath.item].name
-        cell.productPrice.text = String(fruits![indexPath.item].price)
+        cell.productName.text = products![0][indexPath.item].name
+        cell.productPrice.text = String(products![0][indexPath.item].price)
         return cell
     }
     

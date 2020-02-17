@@ -12,26 +12,24 @@ import XCTest
 class GetProductsServiceTests: XCTestCase {
     
     var productsService = GetProductsService()
-    var fruits: [Product]? = [] /*{
-        didSet {
-            self.postsCollection.reloadData()
-        }
-    }*/
+    var products: [[Product]]? = []
+    
 
     func testProductsObtained() {
-        let expectation = XCTestExpectation(description: "Download product collection from Firebase.")
-        productsService.getFruits { data in
+        let expectation = XCTestExpectation(description: "Download product collections from Firebase.")
+        productsService.getProducts {data in
             XCTAssertNotNil(data, "No data was downloaded.")
-            self.fruits = data
+            self.products = data
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 5.0)
-        //Test fruits quantity
-        XCTAssert(fruits!.count == 12)
+        //Test number of product categories
+        XCTAssert(products!.count == 5)
+        
         //Test first element
-        XCTAssertNotNil(fruits![0].name, "No name downloaded")
-        XCTAssertNotNil(fruits![0].unit, "No unit downloaded.")
-        XCTAssertNotNil(fruits![0].price, "No price downloaded.")
+        XCTAssertNotNil(products![0][0].name, "No name downloaded")
+        XCTAssertNotNil(products![0][0].unit, "No unit downloaded.")
+        XCTAssertNotNil(products![0][0].price, "No price downloaded.")
         
     }
 

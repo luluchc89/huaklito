@@ -11,6 +11,9 @@
 		65530411B834C3EE47B7A284 /* Pods_Huaklito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC234799C14564C27EB7E42 /* Pods_Huaklito.framework */; };
 		980AC01A23F72BD4004C135E /* BuyProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC01923F72BD4004C135E /* BuyProductsViewController.swift */; };
 		980AC01C23F735EE004C135E /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC01B23F735EE004C135E /* ProductCollectionViewCell.swift */; };
+		980AC02023F9FDCB004C135E /* FirebaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC01F23F9FDCB004C135E /* FirebaseClient.swift */; };
+		980AC02223FA0C95004C135E /* FirebaseCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC02123FA0C95004C135E /* FirebaseCollection.swift */; };
+		980AC02423FA28FB004C135E /* FirebaseClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC02323FA28FB004C135E /* FirebaseClientTests.swift */; };
 		98AF7C4B23F36BF300209400 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF7C4A23F36BF300209400 /* AppDelegate.swift */; };
 		98AF7C4D23F36BF300209400 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF7C4C23F36BF300209400 /* SceneDelegate.swift */; };
 		98AF7C4F23F36BF300209400 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF7C4E23F36BF300209400 /* ViewController.swift */; };
@@ -44,6 +47,9 @@
 		7C0B8B8FF44B2C1EA6B464C2 /* Pods-HuaklitoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuaklitoTests.debug.xcconfig"; path = "Target Support Files/Pods-HuaklitoTests/Pods-HuaklitoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		980AC01923F72BD4004C135E /* BuyProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyProductsViewController.swift; sourceTree = "<group>"; };
 		980AC01B23F735EE004C135E /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		980AC01F23F9FDCB004C135E /* FirebaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseClient.swift; sourceTree = "<group>"; };
+		980AC02123FA0C95004C135E /* FirebaseCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCollection.swift; sourceTree = "<group>"; };
+		980AC02323FA28FB004C135E /* FirebaseClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseClientTests.swift; sourceTree = "<group>"; };
 		98AF7C4723F36BF300209400 /* Huaklito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huaklito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98AF7C4A23F36BF300209400 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98AF7C4C23F36BF300209400 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				98AF7C7E23F646F300209400 /* GetProductsService.swift */,
+				980AC01F23F9FDCB004C135E /* FirebaseClient.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -180,6 +187,7 @@
 			children = (
 				98AF7C7823F638D200209400 /* Product.swift */,
 				98AF7C7A23F63A8D00209400 /* ProductCategory.swift */,
+				980AC02123FA0C95004C135E /* FirebaseCollection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				98AF7C8123F6538400209400 /* GetProductsServiceTests.swift */,
+				980AC02323FA28FB004C135E /* FirebaseClientTests.swift */,
 			);
 			path = Datasource;
 			sourceTree = "<group>";
@@ -391,11 +400,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				980AC02223FA0C95004C135E /* FirebaseCollection.swift in Sources */,
 				98AF7C7B23F63A8D00209400 /* ProductCategory.swift in Sources */,
 				98AF7C4F23F36BF300209400 /* ViewController.swift in Sources */,
 				980AC01C23F735EE004C135E /* ProductCollectionViewCell.swift in Sources */,
 				98AF7C7F23F646F300209400 /* GetProductsService.swift in Sources */,
 				980AC01A23F72BD4004C135E /* BuyProductsViewController.swift in Sources */,
+				980AC02023F9FDCB004C135E /* FirebaseClient.swift in Sources */,
 				98AF7C7923F638D200209400 /* Product.swift in Sources */,
 				98AF7C4B23F36BF300209400 /* AppDelegate.swift in Sources */,
 				98AF7C4D23F36BF300209400 /* SceneDelegate.swift in Sources */,
@@ -408,6 +419,7 @@
 			files = (
 				98AF7C8223F6538400209400 /* GetProductsServiceTests.swift in Sources */,
 				98AF7C6223F36BF500209400 /* HuaklitoTests.swift in Sources */,
+				980AC02423FA28FB004C135E /* FirebaseClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
