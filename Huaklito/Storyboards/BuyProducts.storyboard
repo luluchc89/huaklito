@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xhQ-Iw-okl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8tl-Hc-1Bz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Comprar-->
+        <!--Buy Products View Controller-->
         <scene sceneID="EnF-kq-RdM">
             <objects>
                 <viewController id="xhQ-Iw-okl" customClass="BuyProductsViewController" customModule="Huaklito" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,16 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PQw-N6-v4l">
-                                <rect key="frame" x="0.0" y="35" width="414" height="100"/>
-                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="YD3-4x-6jh"/>
-                                </constraints>
-                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hWi-y4-NNx">
-                                <rect key="frame" x="0.0" y="143" width="414" height="670"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h1k-5K-cge">
                                     <size key="itemSize" width="110" height="170"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -89,23 +82,39 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="PQw-N6-v4l" firstAttribute="top" secondItem="bpp-4j-UR6" secondAttribute="top" constant="35" id="1RX-xk-DyL"/>
-                            <constraint firstItem="hWi-y4-NNx" firstAttribute="top" secondItem="PQw-N6-v4l" secondAttribute="bottom" constant="8" symbolic="YES" id="1ad-vO-0zv"/>
-                            <constraint firstItem="hWM-8N-DIx" firstAttribute="trailing" secondItem="hWi-y4-NNx" secondAttribute="trailing" id="DXm-xq-0Zy"/>
-                            <constraint firstItem="hWi-y4-NNx" firstAttribute="leading" secondItem="hWM-8N-DIx" secondAttribute="leading" id="IJI-Zf-rU9"/>
-                            <constraint firstItem="hWM-8N-DIx" firstAttribute="bottom" secondItem="hWi-y4-NNx" secondAttribute="bottom" id="RVF-q2-DsR"/>
-                            <constraint firstItem="PQw-N6-v4l" firstAttribute="leading" secondItem="hWM-8N-DIx" secondAttribute="leading" id="l0i-P0-gIM"/>
-                            <constraint firstItem="PQw-N6-v4l" firstAttribute="trailing" secondItem="hWM-8N-DIx" secondAttribute="trailing" id="ykp-mX-R6g"/>
+                            <constraint firstItem="hWi-y4-NNx" firstAttribute="trailing" secondItem="hWM-8N-DIx" secondAttribute="trailing" id="1LH-da-kCt"/>
+                            <constraint firstItem="hWi-y4-NNx" firstAttribute="leading" secondItem="hWM-8N-DIx" secondAttribute="leading" id="IoM-yT-kf0"/>
+                            <constraint firstItem="hWi-y4-NNx" firstAttribute="top" secondItem="hWM-8N-DIx" secondAttribute="top" id="TfC-i4-vFO"/>
+                            <constraint firstItem="hWi-y4-NNx" firstAttribute="bottom" secondItem="hWM-8N-DIx" secondAttribute="bottom" id="hQE-Uk-GES"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hWM-8N-DIx"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Comprar" id="Aa6-BM-dCk"/>
+                    <navigationItem key="navigationItem" id="67C-OQ-usG"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="productsCollection" destination="hWi-y4-NNx" id="Ij4-Vg-bNf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5i-SQ-d43" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="116.51785714285714"/>
+        </scene>
+        <!--Comprar-->
+        <scene sceneID="0r5-Tb-n8x">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8tl-Hc-1Bz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Comprar" id="Aa6-BM-dCk"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GaD-da-3gK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xhQ-Iw-okl" kind="relationship" relationship="rootViewController" id="05q-wo-RGR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jCz-I1-6Fd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
         </scene>

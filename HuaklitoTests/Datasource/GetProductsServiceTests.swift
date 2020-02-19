@@ -26,10 +26,15 @@ class GetProductsServiceTests: XCTestCase {
         //Test number of product categories
         XCTAssert(products!.count == 5)
         
-        //Test first element
+        //Test first element of first array is not nil
         XCTAssertNotNil(products![0][0].name, "No name downloaded")
         XCTAssertNotNil(products![0][0].unit, "No unit downloaded.")
         XCTAssertNotNil(products![0][0].price, "No price downloaded.")
+        
+        //Test first element of last array is not nil
+        XCTAssertNotNil(products![4][0].name, "No name downloaded")
+        XCTAssertNotNil(products![4][0].unit, "No unit downloaded.")
+        XCTAssertNotNil(products![4][0].price, "No price downloaded.")
         
     }
 

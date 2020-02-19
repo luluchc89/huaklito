@@ -14,4 +14,19 @@ enum ProductCategory: String, CaseIterable {
     case groceries
     case dairyProducts
     case disposableProducts
+    
+    func getCategoryTitle() -> String {
+        switch self {
+        case .fruit:
+            return "Fruta"
+        case .vegetables:
+            return "Verdura"
+        case .groceries:
+            return "Abarrotes"
+        case .dairyProducts:
+            return "Lacteos"
+        case .disposableProducts:
+            return "Desechables"
+        }
+    }
 }
