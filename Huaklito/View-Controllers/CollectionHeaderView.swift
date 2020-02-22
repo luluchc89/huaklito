@@ -27,7 +27,7 @@ class CollectionHeaderView: UICollectionReusableView {
     func setUpCollectionTitle() {
         titleLabel = UILabel()
         titleLabel?.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel?.backgroundColor = .lightGray
+        titleLabel?.backgroundColor = .systemGreen
         titleLabel?.font = UIFont.boldSystemFont(ofSize: 22.0)
         titleLabel?.textAlignment = .center
         

@@ -39,6 +39,7 @@ class FirebaseClient<T> {
         }
     }
     
+    
     func createObjectFromDocument(document: QueryDocumentSnapshot, collection: FirebaseCollection) -> T {
         switch collection {
         case .fruit, .vegetables, .dairyProducts, .disposableProducts, .groceries:
@@ -51,6 +52,18 @@ class FirebaseClient<T> {
             return product as! T
         }
         
+    }
+    
+    func downloadImage(storageFolder: String, imageFileName: String, userCompletionHandler: @escaping (Data?) -> Void) {
+        let userImageRef = storageReference.child(storageFolder).child(imageFileName + ".jpg")
+        
+        userImageRef.getData(maxSize: 1*1024*1024, completion: { (data, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            }else{
+                userCompletionHandler(data)
+            }
+        })
     }
     
     

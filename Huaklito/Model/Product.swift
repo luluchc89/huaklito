@@ -15,3 +15,8 @@ struct Product {
     var price: Double
     
 }
+
+struct ProductInKart {
+    var product: Product
+    var quantity: Int
+}

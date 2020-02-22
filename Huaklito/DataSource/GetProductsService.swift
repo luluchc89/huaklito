@@ -6,7 +6,7 @@
 //  Copyright © 2020 sgh. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 class GetProductsService {
@@ -32,9 +32,9 @@ class GetProductsService {
         
     }
     
-
-    func getFruits(userCompletionHandler: @escaping ([Product]) -> Void) {
-        client.getFirebaseCollection(collectionName: .fruit) { data in
+    
+    func getProductImage(productId: String, userCompletionHandler: @escaping (Data?) -> Void) {
+        client.downloadImage(storageFolder: "/productPictures", imageFileName: productId) {data in
             userCompletionHandler(data)
         }
     }

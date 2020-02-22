@@ -39,6 +39,10 @@ class BuyProductsViewController: UIViewController {
     var isFiltering: Bool {
       return searchController.isActive && !isSearchBarEmpty
     }
+    
+    //Kart array for products to buy
+    var kartProducts = [ProductInKart]()
+    var imagesOfKartProducts = [UIImage]()
 
     
     @IBOutlet weak var productsCollection: UICollectionView!
@@ -46,6 +50,8 @@ class BuyProductsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         //Collection View Protocols
         productsCollection.dataSource = self
@@ -68,19 +74,25 @@ class BuyProductsViewController: UIViewController {
         navigationItem.searchController = searchController
         
     }
+
     
-
-
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let destination = segue.destination as?
+            ProductDetailViewController, let index =
+            productsCollection.indexPathsForSelectedItems?.first {
+            destination.delegate = self
+            destination.productData = products?[index.section][index.row]
+            guard let cell = productsCollection.cellForItem(at: index) as? ProductCollectionViewCell else {return}
+            destination.productImageData = cell.productImage.image
+        }
+        else if let destination = segue.destination as?
+            ConfirmOrderViewController {
+            destination.productsToBuy = self.kartProducts
+        }
     }
-    */
-
+    
 }
 
 
@@ -103,17 +115,23 @@ extension BuyProductsViewController: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        var id, name, price : String
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ProductCollectionViewCell
         if isFiltering {
-            cell.productImage.image = UIImage(named: "holder")
-            cell.productName.text = filteredProducts[indexPath.item].name
-            cell.productPrice.text = String(filteredProducts[indexPath.item].price)
+            id = filteredProducts[indexPath.item].id
+            name = filteredProducts[indexPath.item].name
+            price = String(filteredProducts[indexPath.item].price)
         } else {
             guard let products = self.products else { return cell }
-            cell.productImage.image = UIImage(named: "holder")
-            cell.productName.text = products[indexPath.section][indexPath.item].name
-            cell.productPrice.text = String(products[indexPath.section][indexPath.item].price)
+            id = products[indexPath.section][indexPath.item].id
+            name = products[indexPath.section][indexPath.item].name
+            price = String(products[indexPath.section][indexPath.item].price)
         }
+        productsService.getProductImage(productId: id) {data in
+            cell.productImage.image = UIImage(data: data!)
+        }
+        cell.productName.text = name
+        cell.productPrice.text = "$\(price)"
         return cell
     }
     
@@ -163,5 +181,15 @@ extension BuyProductsViewController :  UISearchControllerDelegate, UISearchBarDe
         
         productsCollection.reloadData()
     }
+    
+}
+
+//Extension to implement delegate to get data from ProductDetailViewController
+extension BuyProductsViewController : ProductDetailViewControllerDelegate {
+    
+    func addProductToKart(withParameter param: ProductInKart) {
+        self.kartProducts.append(param)
+    }
+    
     
 }

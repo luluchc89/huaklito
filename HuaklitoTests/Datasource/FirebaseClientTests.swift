@@ -13,6 +13,7 @@ class FirebaseClientTests: XCTestCase {
     
     let client = FirebaseClient<Product>()
     var products: [Product]? = []
+    var imageData : UIImage?
 
 
     func testDownloadFruitCollection() {
@@ -41,11 +42,25 @@ class FirebaseClientTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 5.0)
         //Test fruits quantity
-        XCTAssert(products!.count == 12)
+        XCTAssert(products!.count == 14)
         //Test first element
         XCTAssertNotNil(products![0].name, "No name downloaded")
         XCTAssertNotNil(products![0].unit, "No unit downloaded.")
         XCTAssertNotNil(products![0].price, "No price downloaded.")
+        
+    }
+    
+    func testImageDownloaded() {
+        let expectation = XCTestExpectation(description: "Download image from Firebase Storage.")
+        let productId = "13lkue89jXi1yzPssWDF"
+        client.downloadImage(storageFolder: "/productPictures", imageFileName: productId) {data in
+                XCTAssertNotNil(data, "No data was downloaded.")
+            self.imageData = UIImage(data: data!)
+                expectation.fulfill()
+               }
+        wait(for: [expectation], timeout: 10.0)
+
+        XCTAssertNotNil(self.imageData, "No image was created from data.")
         
     }
 
