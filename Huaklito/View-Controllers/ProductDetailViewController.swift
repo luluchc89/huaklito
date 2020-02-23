@@ -10,6 +10,7 @@ import UIKit
 
 protocol ProductDetailViewControllerDelegate {
     func addProductToKart(withParameter param: ProductInKart)
+    func addImageOfKartProduct(withParameter param: UIImage)
 }
 
 class ProductDetailViewController: UIViewController {
@@ -60,6 +61,7 @@ class ProductDetailViewController: UIViewController {
         let productToBuy = ProductInKart(product: productData, quantity: quantity)
         if let delegate = delegate {
             delegate.addProductToKart(withParameter: productToBuy)
+            delegate.addImageOfKartProduct(withParameter: productImage.image!)
         }
 
         let addToCartConfirmation = UIAlertController(title: "Producto agregado", message: productData.name, preferredStyle: .alert)

@@ -15,7 +15,8 @@ class ConfirmOrderViewController: UIViewController {
     @IBOutlet weak var totalToPayLabel: UILabel!
     @IBOutlet weak var confirmOrderButton: UIButton!
     
-    var productsToBuy: [ProductInKart]!
+    var productsToBuy : [ProductInKart]?
+    var imagesOfProductsToBuy : [UIImage]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,18 +34,10 @@ class ConfirmOrderViewController: UIViewController {
            }
            return totalToPay
        }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
+
+
 
 //Extension to implement Table View methods
 extension ConfirmOrderViewController: UITableViewDelegate, UITableViewDataSource {
@@ -58,13 +51,10 @@ extension ConfirmOrderViewController: UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let product = productsToBuy![indexPath.row]
         let totalToPay = Double(product.quantity)*product.product.price
-        cell.textLabel?.text = "\(product.quantity) x $\(product.product.price) = \(totalToPay)"
+        cell.textLabel?.text = "\(product.quantity) x $\(product.product.price) = $\(totalToPay)"
         cell.detailTextLabel?.text = product.product.name
-        
+        cell.imageView?.image = imagesOfProductsToBuy?[indexPath.row]
         return cell
     }
-    
-    
-    
-    
+
 }

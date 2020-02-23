@@ -88,8 +88,9 @@ class BuyProductsViewController: UIViewController {
             destination.productImageData = cell.productImage.image
         }
         else if let destination = segue.destination as?
-            ConfirmOrderViewController {
+            LoginViewController {
             destination.productsToBuy = self.kartProducts
+            destination.imagesOfProductsToBuy = self.imagesOfKartProducts
         }
     }
     
@@ -191,5 +192,7 @@ extension BuyProductsViewController : ProductDetailViewControllerDelegate {
         self.kartProducts.append(param)
     }
     
-    
+    func addImageOfKartProduct(withParameter param: UIImage) {
+        self.imagesOfKartProducts.append(param)
+    }
 }
