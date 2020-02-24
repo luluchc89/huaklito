@@ -41,9 +41,10 @@ class LoginViewController: UIViewController {
                 })
                 errorAlert.addAction(okAction)
                 self.present(errorAlert, animated: true, completion: nil)
+            } else {
+                self.performSegue(withIdentifier: "checkoutOrder", sender: self)
             }
         }
-        isLogged()
     }
     
     func isLogged(){
@@ -62,6 +63,7 @@ class LoginViewController: UIViewController {
             ConfirmOrderViewController {
             destination.productsToBuy = self.productsToBuy
             destination.imagesOfProductsToBuy = self.imagesOfProductsToBuy
+            destination.userEmail = authClient.getCurrentUser()
         }
     }
     

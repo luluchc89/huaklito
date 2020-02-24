@@ -9,7 +9,8 @@
 import Foundation
 
 struct User {
+    var id : String?
     var email : String
     var deliveryAddress : String
-    var orders : [Order]
+    var orders : [Order]?
 }

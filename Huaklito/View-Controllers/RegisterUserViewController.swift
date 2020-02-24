@@ -26,10 +26,10 @@ class RegisterUserViewController: UIViewController {
     
     
     @IBAction func registerUser(_ sender: Any) {
-        guard let userEmail = emailTextField.text, userEmail != "", let userPass = passwordTextField.text, userPass != "" else{
+        guard let userEmail = emailTextField.text, userEmail != "", let userPass = passwordTextField.text, userPass != "", let address = addressTextField.text, address != "" else{
             return
         }
-        authClient.createUser(email: userEmail, pass: userPass) { (auth,error) in
+        authClient.createUser(email: userEmail, pass: userPass, address: address) { (auth,error) in
             if let error = error {
                 let registerUserErrorAlert = UIAlertController(title: "Error al crear el usuario", message: error.localizedDescription, preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "OK", style: .cancel, handler: {action in

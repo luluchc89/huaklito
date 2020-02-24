@@ -20,8 +20,8 @@ class GetProductsService {
         let categories : [String] = ProductCategory.allCases.map { $0.rawValue }
         for category in categories{
             dispatchGroup.enter()
-            let collection = FirebaseCollection(rawValue: category)
-            client.getFirebaseCollection(collectionName: collection!) { data in
+            let collection = DataCollection(rawValue: category)
+            client.getCollection(collectionName: collection!) { data in
                 products.append(data)
                 dispatchGroup.leave()
             }

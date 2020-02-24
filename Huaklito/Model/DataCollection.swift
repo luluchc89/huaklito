@@ -1,8 +1,8 @@
 //
-//  FirebaseCollection.swift
+//  DataCollection.swift
 //  Huaklito
 //
-//  Created by Ma. de Lourdes Chaparro Candiani on 16/02/20.
+//  Created by Ma. de Lourdes Chaparro Candiani on 23/02/20.
 //  Copyright © 2020 sgh. All rights reserved.
 //
 
@@ -15,5 +15,5 @@ enum DataCollection: String {
     case dairyProducts
     case disposableProducts
     case users
+    case orders
 }
-

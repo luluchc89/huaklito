@@ -12,7 +12,6 @@
 		980AC01A23F72BD4004C135E /* BuyProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC01923F72BD4004C135E /* BuyProductsViewController.swift */; };
 		980AC01C23F735EE004C135E /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC01B23F735EE004C135E /* ProductCollectionViewCell.swift */; };
 		980AC02023F9FDCB004C135E /* FirebaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC01F23F9FDCB004C135E /* FirebaseClient.swift */; };
-		980AC02223FA0C95004C135E /* FirebaseCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC02123FA0C95004C135E /* FirebaseCollection.swift */; };
 		980AC02423FA28FB004C135E /* FirebaseClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC02323FA28FB004C135E /* FirebaseClientTests.swift */; };
 		980AC02623FB56EE004C135E /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC02523FB56EE004C135E /* CollectionHeaderView.swift */; };
 		980AC02823FDE48A004C135E /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC02723FDE48A004C135E /* ProductDetailViewController.swift */; };
@@ -23,6 +22,7 @@
 		980AC036240215A2004C135E /* FirebaseAuthClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC035240215A2004C135E /* FirebaseAuthClientTests.swift */; };
 		980AC038240325FB004C135E /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC037240325FB004C135E /* Order.swift */; };
 		980AC03A24032FCD004C135E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC03924032FCD004C135E /* User.swift */; };
+		980AC03C24035159004C135E /* DataCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980AC03B24035159004C135E /* DataCollection.swift */; };
 		98AF7C4B23F36BF300209400 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF7C4A23F36BF300209400 /* AppDelegate.swift */; };
 		98AF7C4D23F36BF300209400 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF7C4C23F36BF300209400 /* SceneDelegate.swift */; };
 		98AF7C4F23F36BF300209400 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF7C4E23F36BF300209400 /* ViewController.swift */; };
@@ -57,7 +57,6 @@
 		980AC01923F72BD4004C135E /* BuyProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyProductsViewController.swift; sourceTree = "<group>"; };
 		980AC01B23F735EE004C135E /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		980AC01F23F9FDCB004C135E /* FirebaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseClient.swift; sourceTree = "<group>"; };
-		980AC02123FA0C95004C135E /* FirebaseCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCollection.swift; sourceTree = "<group>"; };
 		980AC02323FA28FB004C135E /* FirebaseClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseClientTests.swift; sourceTree = "<group>"; };
 		980AC02523FB56EE004C135E /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		980AC02723FDE48A004C135E /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +67,7 @@
 		980AC035240215A2004C135E /* FirebaseAuthClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthClientTests.swift; sourceTree = "<group>"; };
 		980AC037240325FB004C135E /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		980AC03924032FCD004C135E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		980AC03B24035159004C135E /* DataCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCollection.swift; sourceTree = "<group>"; };
 		98AF7C4723F36BF300209400 /* Huaklito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huaklito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98AF7C4A23F36BF300209400 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98AF7C4C23F36BF300209400 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -213,9 +213,9 @@
 			children = (
 				98AF7C7823F638D200209400 /* Product.swift */,
 				98AF7C7A23F63A8D00209400 /* ProductCategory.swift */,
-				980AC02123FA0C95004C135E /* FirebaseCollection.swift */,
 				980AC037240325FB004C135E /* Order.swift */,
 				980AC03924032FCD004C135E /* User.swift */,
+				980AC03B24035159004C135E /* DataCollection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -419,7 +419,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				980AC02223FA0C95004C135E /* FirebaseCollection.swift in Sources */,
 				980AC02623FB56EE004C135E /* CollectionHeaderView.swift in Sources */,
 				98AF7C7B23F63A8D00209400 /* ProductCategory.swift in Sources */,
 				98AF7C4F23F36BF300209400 /* ViewController.swift in Sources */,
@@ -435,6 +434,7 @@
 				980AC0342401E820004C135E /* LoginViewController.swift in Sources */,
 				980AC03A24032FCD004C135E /* User.swift in Sources */,
 				98AF7C4B23F36BF300209400 /* AppDelegate.swift in Sources */,
+				980AC03C24035159004C135E /* DataCollection.swift in Sources */,
 				980AC02A2400809E004C135E /* ConfirmOrderViewController.swift in Sources */,
 				98AF7C4D23F36BF300209400 /* SceneDelegate.swift in Sources */,
 			);

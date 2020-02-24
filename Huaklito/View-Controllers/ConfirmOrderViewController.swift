@@ -15,25 +15,48 @@ class ConfirmOrderViewController: UIViewController {
     @IBOutlet weak var totalToPayLabel: UILabel!
     @IBOutlet weak var confirmOrderButton: UIButton!
     
+    let client = FirebaseClient<Order>()
+    
     var productsToBuy : [ProductInKart]?
     var imagesOfProductsToBuy : [UIImage]?
+    var userEmail : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //TableView Protocols
         productsToBuyTable.dataSource = self
         productsToBuyTable.delegate = self
 
         confirmOrderButton.layer.cornerRadius = 5
+        
+        let total = String(calculateTotalToPay(products: productsToBuy))
+        totalToPayLabel.text = "Total: $\(total)"
     }
     
-    func calculateTotalToPay(products: [ProductInKart]) -> Double{
-           var totalToPay: Double = 0.0
-           for product in products {
-               totalToPay += (product.product.price*Double(product.quantity))
-           }
+
+    func calculateTotalToPay(products: [ProductInKart]?) -> Double {
+        var totalToPay: Double = 0.0
+        if let products = products {
+            for product in products {
+                totalToPay += (product.product.price*Double(product.quantity))
+            }
+        }
            return totalToPay
        }
+    
+    
+    @IBAction func confirmOrder(_ sender: UIButton) {
+        let order = Order(orderPlacedAt: Date(), totalToPay: calculateTotalToPay(products: productsToBuy))
+        client.insertToCollectionWithinDocument(rootCollection: .users, document: userEmail, innerCollection: .orders, objectToInsert: order) {error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+        self.navigationController?.popToRootViewController(animated: true)
+        
+    }
+    
     
 }
 

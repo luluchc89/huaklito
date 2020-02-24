@@ -11,5 +11,6 @@ import Foundation
 struct Order {
     var orderPlacedAt : Date
     var orderDeliveredAt : Date?
-    var products : [ProductInKart]
+    var totalToPay : Double
+    var products : [ProductInKart]?
 }

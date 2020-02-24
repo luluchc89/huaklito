@@ -11,14 +11,15 @@ import XCTest
 
 class FirebaseClientTests: XCTestCase {
     
-    let client = FirebaseClient<Product>()
+    let productClient = FirebaseClient<Product>()
+    let userClient = FirebaseClient<User>()
     var products: [Product]? = []
     var imageData : UIImage?
 
 
     func testDownloadFruitCollection() {
         let expectation = XCTestExpectation(description: "Download product collection from Firebase.")
-        client.getFirebaseCollection(collectionName: .fruit) { data in
+        productClient.getCollection(collectionName: .fruit) { data in
             XCTAssertNotNil(data, "No data was downloaded.")
             self.products = data
             expectation.fulfill()
@@ -35,7 +36,7 @@ class FirebaseClientTests: XCTestCase {
     
     func testDownloadVegetableCollection() {
         let expectation = XCTestExpectation(description: "Download product collection from Firebase.")
-        client.getFirebaseCollection(collectionName: .vegetables) { data in
+        productClient.getCollection(collectionName: .vegetables) { data in
             XCTAssertNotNil(data, "No data was downloaded.")
             self.products = data
             expectation.fulfill()
@@ -53,7 +54,7 @@ class FirebaseClientTests: XCTestCase {
     func testImageDownloaded() {
         let expectation = XCTestExpectation(description: "Download image from Firebase Storage.")
         let productId = "13lkue89jXi1yzPssWDF"
-        client.downloadImage(storageFolder: "/productPictures", imageFileName: productId) {data in
+        productClient.downloadImage(storageFolder: "/productPictures", imageFileName: productId) {data in
                 XCTAssertNotNil(data, "No data was downloaded.")
             self.imageData = UIImage(data: data!)
                 expectation.fulfill()
@@ -62,6 +63,26 @@ class FirebaseClientTests: XCTestCase {
 
         XCTAssertNotNil(self.imageData, "No image was created from data.")
         
+    }
+    
+    func testInsertUserToCollection() {
+        let expectation = XCTestExpectation(description: "Insert user in collection.")
+        let user = User(email: "test@test.mx", deliveryAddress: "Test 1")
+        userClient.insertToCollection(collectionName: .users, objectToInsert: user) { error in
+            XCTAssertNil(error, "User wasn´t inserted.")
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 5.0)
+    }
+    
+    func testInsertUserToCollectionWithCustomId() {
+        let expectation = XCTestExpectation(description: "Insert user in collection.")
+        let user = User(email: "test@test.mx", deliveryAddress: "Test 1")
+        userClient.insertToCollection(collectionName: .users, id: user.email, objectToInsert: user) { error in
+            XCTAssertNil(error, "User wasn´t inserted.")
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 5.0)
     }
 
 

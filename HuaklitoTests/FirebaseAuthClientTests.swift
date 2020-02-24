@@ -18,7 +18,7 @@ class FirebaseAuthClientTests: XCTestCase {
 
     func testCreateUser() {
         let expectation = XCTestExpectation(description: "Create new user with Firebase Auth")
-        authClient.createUser(email: "test@test.com", pass: "test123") { (auth,error) in
+        authClient.createUser(email: "test@test.com", pass: "test123", address: "Test") { (auth,error) in
             XCTAssertNotNil(auth, "User was not created")
             self.auth = auth
             expectation.fulfill()
