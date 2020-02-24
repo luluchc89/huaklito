@@ -83,7 +83,12 @@ class BuyProductsViewController: UIViewController {
             ProductDetailViewController, let index =
             productsCollection.indexPathsForSelectedItems?.first {
             destination.delegate = self
-            destination.productData = products?[index.section][index.row]
+            if isFiltering {
+                destination.productData = filteredProducts[index.row]
+            } else {
+                destination.productData = products?[index.section][index.row]
+            }
+            
             guard let cell = productsCollection.cellForItem(at: index) as? ProductCollectionViewCell else {return}
             destination.productImageData = cell.productImage.image
         }
